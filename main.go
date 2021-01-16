@@ -67,6 +67,9 @@ func checkIPIsWhitelisted(response http.ResponseWriter, r *http.Request) {
 	}
 
 	responseData.ValidCode = countryIsWhiteListed(countryCode, whiteList)
+	if responseData.ValidCode == false {
+		responseData.ErrorReason = "IP not within the whitelist"
+	}
 	returnResponse(response, responseData, 200)
 }
 
