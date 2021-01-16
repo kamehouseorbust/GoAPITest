@@ -22,7 +22,7 @@ var dbPath string
 var countryReader *geoip2.CountryReader
 
 func init() {
-	dbPath = "/home/hdr/code/GoAPITest/GeoLite2-Country.mmdb"
+	dbPath = "GeoLite2-Country.mmdb"
 	countryReader = initializeDBReader(dbPath)
 }
 
